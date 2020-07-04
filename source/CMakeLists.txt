@@ -47,8 +47,28 @@ add_executable(clock
 
 add_dependencies(clock glfw nanovg ${COPY_BINARY})
 
-
 target_link_libraries(clock
+  glfw
+  ${GLFW_LIBRARIES}
+  nanovg
+  ${OPENGL_LIBRARIES}
+  )
+
+  # Build Aufgabe 2 und 3
+  add_executable(
+  	  aufgabe_2_und_3 aufgabe_2_und_3.cpp
+  )
+
+  #Build Aufgabe 5
+   add_executable(aufgabe_5
+  	  aufgabe_5.cpp
+      vec2.cpp
+      circle.cpp
+  )
+
+  add_dependencies(aufgabe_5 glfw nanovg ${COPY_BINARY})
+
+  target_link_libraries(aufgabe_5
   glfw
   ${GLFW_LIBRARIES}
   nanovg

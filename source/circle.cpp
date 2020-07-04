@@ -7,6 +7,11 @@ Circle::Circle():
     base_{},
     rgb_{} {}
 
+Circle::Circle(float const& r):
+    r_{r},
+    base_{},
+    rgb_{} {}
+
 Circle::Circle(float const& r, Vec2 const& base, Color const& rgb):
     r_{r},
     base_{base},
@@ -51,5 +56,30 @@ bool Circle::is_inside(Vec2 const& Point)const
         return true;
     }
     return false;
+}
+
+bool Circle::operator< (Circle const& c){
+    if (r_ >= c.r_) {
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+bool Circle::operator> (Circle const& c) {
+    if (r_ <= c.r_) {
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+bool Circle::operator== (Circle const& c) {
+    if (r_ != c.r_) {
+        return false;
+    }
+    else {
+        return true;
+    }
 }
 
