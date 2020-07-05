@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_RUNNER
 #include <catch.hpp>
-#include "circle.cpp"
+#include "circle.hpp"
 #include <iostream>
 #include <list>
 #include <vector>

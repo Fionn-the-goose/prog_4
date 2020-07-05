@@ -77,3 +77,60 @@ target_link_libraries(aufgabe_5
   )
 
 add_dependencies(aufgabe_5 glfw nanovg ${COPY_BINARY})
+
+#Build aufgabe_6
+add_executable(aufgabe_6
+     glew.c
+     aufgabe_6.cpp   
+     circle.cpp   
+     mat2.cpp  
+     window.cpp   
+     vec2.cpp
+  )
+
+target_link_libraries(aufgabe_6
+  glfw
+  ${GLFW_LIBRARIES}
+  nanovg
+  ${OPENGL_LIBRARIES}
+  )
+
+add_dependencies(aufgabe_6 glfw nanovg ${COPY_BINARY})
+
+#Build aufgabe_8
+add_executable(aufgabe_8
+     glew.c
+     aufgabe_8.cpp   
+     circle.cpp   
+     mat2.cpp  
+     window.cpp   
+     vec2.cpp
+  )
+
+target_link_libraries(aufgabe_8
+  glfw
+  ${GLFW_LIBRARIES}
+  nanovg
+  ${OPENGL_LIBRARIES}
+  )
+
+add_dependencies(aufgabe_8 glfw nanovg ${COPY_BINARY})
+
+#Build aufgabe_9
+add_executable(aufgabe_9
+     glew.c
+     aufgabe_9.cpp   
+     circle.cpp   
+     mat2.cpp  
+     window.cpp   
+     vec2.cpp
+  )
+
+target_link_libraries(aufgabe_9
+  glfw
+  ${GLFW_LIBRARIES}
+  nanovg
+  ${OPENGL_LIBRARIES}
+  )
+
+add_dependencies(aufgabe_9 glfw nanovg ${COPY_BINARY})
