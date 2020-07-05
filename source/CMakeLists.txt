@@ -172,3 +172,22 @@ target_link_libraries(aufgabe_11
   )
 
 add_dependencies(aufgabe_11 glfw nanovg ${COPY_BINARY})
+
+#Build aufgabe_12
+add_executable(aufgabe_12
+     glew.c
+     aufgabe_12.cpp   
+     circle.cpp   
+     mat2.cpp  
+     window.cpp   
+     vec2.cpp
+  )
+
+target_link_libraries(aufgabe_12
+  glfw
+  ${GLFW_LIBRARIES}
+  nanovg
+  ${OPENGL_LIBRARIES}
+  )
+
+add_dependencies(aufgabe_12 glfw nanovg ${COPY_BINARY})
