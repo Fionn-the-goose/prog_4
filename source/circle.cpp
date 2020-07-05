@@ -58,24 +58,28 @@ bool Circle::is_inside(Vec2 const& Point)const
     return false;
 }
 
-bool Circle::operator< (Circle const& c){
-    if (r_ >= c.r_) {
+float Circle::give_r(){
+    return r_;
+}
+
+bool operator< (Circle c1, Circle c2) {
+    if (c1.give_r() >= c2.give_r()) {
         return false;
     }
     else {
         return true;
     }
 }
-bool Circle::operator> (Circle const& c) {
-    if (r_ <= c.r_) {
+bool operator> (Circle c1, Circle c2) {
+    if (c1.give_r() <= c2.give_r()) {
         return false;
     }
     else {
         return true;
     }
 }
-bool Circle::operator== (Circle const& c) {
-    if (r_ != c.r_) {
+bool operator== (Circle c1, Circle c2) {
+    if (c1.give_r() != c2.give_r()) {
         return false;
     }
     else {

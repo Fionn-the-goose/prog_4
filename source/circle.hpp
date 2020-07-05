@@ -15,15 +15,15 @@ public:
     void draw(Window const& fensterchen);
     void draw(Window const& fensterchen, float t);
     bool is_inside(Vec2 const& Point)const;
-    bool operator< (Circle const& c);
-    bool operator> (Circle const& c);
-    bool operator== (Circle const& c);
+    float give_r();
 private:
     float r_{1.0f};
     Vec2 base_{};
     Color rgb_{};  
 };
 
-
+bool operator< (Circle c1, Circle c2);
+bool operator> (Circle c1, Circle c2);
+bool operator== (Circle c1, Circle c2);
 
 # endif

@@ -3,6 +3,9 @@
 #include "circle.cpp"
 #include <iostream>
 #include <list>
+#include <vector>
+#include <map>
+#include <set>
 #include <algorithm>
 
 using namespace std;
@@ -17,7 +20,7 @@ Circle c5{74.1};
 Circle c6{2.7};
 Circle c7{5.3};
 
-TEST_CASE("Vec2 Aufgabe 2.2", "[vec2]")
+TEST_CASE("Aufgabe 4.5", "[aufgabe_5]")
 {
 	sorted_circles.push_back(c1);
 	sorted_circles.push_back(c2);
@@ -27,10 +30,11 @@ TEST_CASE("Vec2 Aufgabe 2.2", "[vec2]")
 	sorted_circles.push_back(c6);
 	sorted_circles.push_back(c7);
 	sorted_circles.sort();
+
 	REQUIRE(is_sorted(sorted_circles.begin(), sorted_circles.end()));
 }
 
 int main(int argc, char* argv[])
 {
-	return 0;
+	return Catch::Session().run(argc, argv);
 }
