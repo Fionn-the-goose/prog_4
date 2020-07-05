@@ -1,21 +1,32 @@
 #define _USE_MATH_DEFINES
 #include "circle.hpp"
 #include <cmath>
+#include <iostream>
+#include <string>
 
 Circle::Circle():
     r_{},
     base_{},
-    rgb_{} {}
+    rgb_{}, 
+    name_{} {}
 
 Circle::Circle(float const& r):
     r_{r},
     base_{},
-    rgb_{} {}
+    rgb_{},
+    name_{} {}
 
 Circle::Circle(float const& r, Vec2 const& base, Color const& rgb):
     r_{r},
     base_{base},
-    rgb_{rgb} {}
+    rgb_{rgb},
+    name_{} {}
+
+Circle::Circle(float const& r, Vec2 const& base, Color const& rgb, std::string name):
+    r_{ r },
+    base_{ base },
+    rgb_{ rgb },
+    name_{ name } {}
 
 float Circle::circumfence() const
 {
