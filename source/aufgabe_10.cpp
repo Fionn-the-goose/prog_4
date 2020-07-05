@@ -20,8 +20,6 @@ TEST_CASE("filter alle vielfache von drei", "[erase]"){
 	};
 
 	v.erase(remove_if(v.begin(), v.end(), is_not_multiple_of_3), v.end());
-
-
 	REQUIRE(all_of(v.begin(), v.end(), is_multiple_of_3));
 }
 
