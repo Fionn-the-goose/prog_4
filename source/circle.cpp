@@ -58,6 +58,19 @@ void Circle::draw(Window const& fensterchen, float t)
     }
 }
 
+void Circle::draw(Window const& fensterchen, float t, Color rgb)
+{
+    Vec2 start{ 0.0f, r_ };
+    Mat2 rotation{ make_rotation_mat2(M_PI / 180) };
+    Vec2 next{ rotation * start };
+    for (int i = 0; i < 360; i++) {
+        fensterchen.draw_line(start.x + base_.x, start.y + base_.y, next.x + base_.x, next.y + base_.y, rgb.r, rgb.g, rgb.b, t);
+        start = next;
+        next = rotation * next;
+
+    }
+}
+
 bool Circle::is_inside(Vec2 const& Point)const
 {
     float rad{pow(r_, 2)};
@@ -71,6 +84,10 @@ bool Circle::is_inside(Vec2 const& Point)const
 
 float Circle::give_r(){
     return r_;
+}
+
+std::string Circle::give_name() {
+    return name_;
 }
 
 bool operator< (Circle c1, Circle c2) {

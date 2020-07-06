@@ -17,8 +17,10 @@ public:
     float circumfence() const;  //const wird verwendet da 
     void draw(Window const& fensterchen);
     void draw(Window const& fensterchen, float t);
+    void draw(Window const& fensterchen, float t, Color rgb);
     bool is_inside(Vec2 const& Point)const;
     float give_r();
+    std::string give_name();
 private:
     float r_{1.0f};
     Vec2 base_{};
